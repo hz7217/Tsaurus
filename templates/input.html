@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TSaurus - Input</title>
+    <style>
+      body {
+        background-color: #4caf50;
+        text-align: center;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .home {
+        margin-bottom: 20px;
+        position: fixed;
+        bottom: 0;
+      }
+
+      h1 {
+        font-size: 6em;
+        color: #ffffff;
+        text-align: center;
+        animation: fadein 1s ease-out forwards;
+      }
+
+      @keyframes fadein {
+        from {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        border: none;
+        color: #ffffff;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 24px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+
+      input[type="submit"]:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666666;
+        transform: translateY(4px);
+      }
+
+      form {
+        margin-top: 50px;
+      }
+
+      p {
+        font-size: 24px;
+        color: #ffffff;
+      }
+
+      input[type="text"] {
+        padding: 8px;
+        border-radius: 5px;
+        border: none;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>TSaurus</h1>
+      <form action="/input" method="POST">
+        <p>Word1: <input type="text" name="word1" /></p>
+        <p>Word2: <input type="text" name="word2" /></p>
+        <input type="submit" name="words" />
+      </form>
+      <form action="/" class="home" >
+        <p><input type="submit" value="Home" /></p>
+      </form>
+    </div>
+  </body>
+</html>

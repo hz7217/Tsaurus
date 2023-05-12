@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TSaurus</title>
+    <style>
+      body {
+        background-color: #4caf50;
+        text-align: center;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      h1 {
+        font-size: 6em;
+        color: #ffffff;
+        text-align: center;
+        animation: slide 1s ease-out infinite alternate;
+      }
+
+      @keyframes slide {
+        from {
+          transform: translateX(-50px);
+        }
+        to {
+          transform: translateX(50px);
+        }
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 24px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+
+      input[type="submit"]:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>TSaurus</h1>
+      <form action="/input">
+        <input type="submit" name="input" value="Input page" />
+      </form>
+      <form action="/wordlist">
+        <input type="submit" name="wordlist" value="Wordlist page" />
+      </form>
+    </div>
+  </body>
+</html>

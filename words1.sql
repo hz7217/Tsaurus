@@ -1,0 +1,6 @@
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS `word` (
+	`word1`	TEXT,
+	`word2`	TEXT
+);
+COMMIT;
